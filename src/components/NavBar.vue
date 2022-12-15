@@ -26,13 +26,20 @@ export default {
         return{
             nav:['Product','Customer','Pricing','Resources'],
             companyLogo:logo,
-            toggleactive:''
+            toggleactive:'',
+            change:true,
         }
     },
     methods:{
         toggle(){
             //console.log('toggle')
-            this.toggleactive = active;
+            //this.toggleactive = active;
+            this.change = !this.change;
+            if(this.change === true){
+                this.toggleactive = 'active';
+            }else{
+                this.toggleactive ='';
+            }
         }
     }
 }
